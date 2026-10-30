@@ -12,9 +12,14 @@ public struct NightGramPanel: View {
             List {
                 Section("NightGram") {
                     NavigationLink {
+                        NightGramGiftChatDemoView()
+                    } label: {
+                        Label("Send visual gift (demo chat)", systemImage: "gift.fill")
+                    }
+                    NavigationLink {
                         NightGramGiftGalleryView()
                     } label: {
-                        Label("Visual gifts demo", systemImage: "gift")
+                        Label("Visual gifts gallery", systemImage: "gift")
                     }
                     NavigationLink {
                         NightGramStarsDemoView()
