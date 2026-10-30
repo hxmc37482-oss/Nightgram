@@ -1,16 +1,11 @@
 # NightGram v1.0 roadmap
 
-## Prototype files added
-- [x] Panel navigation prototype
-- [x] Visual gift gallery preview
-- [x] Device-local Stars demo counter
-- [x] Local appearance preference
-- [x] UIKit presentation entry point for the NightGram panel
-- [x] Local read-status preference preview (not connected to Telegram read receipts)
-
-## Integration and release status
-- [ ] Add a navigation row to Telegram's existing Settings screen that presents `makeNightGramPanelController()`.
-- [ ] Verify the SettingsUI/TelegramUI navigation boundary and avoid introducing a circular Bazel dependency.
+## Prototype and integration
+- [x] NightGram panel with visual gift gallery, local Stars demo counter, and appearance preferences.
+- [x] Device-local read-status preference preview (not connected to Telegram read receipts).
+- [x] Telegram-native ViewController wrapper for the SwiftUI panel.
+- [x] Add a NightGram row to Telegram's Settings screen.
+- [x] Isolate NightGram as a standalone Bazel module to avoid a TelegramUI/PeerInfoScreen dependency cycle.
 - [ ] Run the Xcode 27.1 GitHub Actions build and resolve compiler or build-system errors.
 - [ ] Build and test on a real device.
 - [ ] Configure signing separately; never commit signing certificates or private keys.
