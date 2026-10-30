@@ -6,6 +6,7 @@
 - [x] Device-local Stars demo counter
 - [x] Local appearance preference
 - [x] UIKit presentation entry point for the NightGram panel
+- [x] Local read-status preference preview (not connected to Telegram read receipts)
 
 ## Integration and release status
 - [ ] Add a navigation row to Telegram's existing Settings screen that presents `makeNightGramPanelController()`.
@@ -15,11 +16,12 @@
 - [ ] Configure signing separately; never commit signing certificates or private keys.
 
 ## Planned, not implemented
-- Privacy controls for read receipts, subject to Telegram protocol and UI constraints.
+- Connect read-receipt privacy behavior to Telegram's actual message/read-state pipeline, subject to protocol constraints.
 - More theme controls and animated gift previews.
 
 ## Safety and transparency
 - The gift gallery is a visual demo; it does not send gifts or mint/transfer NFTs.
 - The Stars counter is fictional local demo data; it is not a purchase or real Telegram balance.
+- The read-status switch currently stores a local preference only; it does not suppress server-side read receipts.
 - Do not display simulated payments or assets as real transactions or ownership.
 - NightGram is an unofficial client prototype. Respect upstream licensing and use your own Telegram API credentials.
