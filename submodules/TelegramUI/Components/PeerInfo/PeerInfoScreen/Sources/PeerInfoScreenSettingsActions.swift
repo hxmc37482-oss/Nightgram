@@ -16,6 +16,7 @@ import PresentationDataUtils
 import PasswordSetupUI
 import InstantPageCache
 import WalletContext
+import NightGram
 import UndoUI
 
 extension PeerInfoScreenNode {
