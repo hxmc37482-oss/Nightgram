@@ -5,11 +5,12 @@
 - [x] Visual gift gallery preview
 - [x] Device-local Stars demo counter
 - [x] Local appearance preference
+- [x] UIKit presentation entry point for the NightGram panel
 
-## Next engineering steps
-- [ ] Inspect Telegram's current Settings navigation and Bazel target structure.
-- [ ] Integrate the panel into the app and add the new Swift files to the correct Bazel targets.
-- [ ] Configure a reproducible macOS/Xcode build in GitHub Actions.
+## Integration and release status
+- [ ] Add a navigation row to Telegram's existing Settings screen that presents `makeNightGramPanelController()`.
+- [ ] Verify the SettingsUI/TelegramUI navigation boundary and avoid introducing a circular Bazel dependency.
+- [ ] Run the Xcode 27.1 GitHub Actions build and resolve compiler or build-system errors.
 - [ ] Build and test on a real device.
 - [ ] Configure signing separately; never commit signing certificates or private keys.
 
