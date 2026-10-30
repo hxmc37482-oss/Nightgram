@@ -62,11 +62,18 @@ public struct NightGramGiftChatDemoView: View {
                         .padding(.horizontal)
 
                     if messages.isEmpty {
-                        ContentUnavailableView(
-                            "No gifts yet",
-                            systemImage: "gift",
-                            description: Text("Choose a gift below to preview it in this chat.")
-                        )
+                        VStack(spacing: 10) {
+                            Image(systemName: "gift")
+                                .font(.system(size: 42))
+                                .foregroundStyle(.secondary)
+                            Text("No gifts yet")
+                                .font(.headline)
+                            Text("Choose a gift below to preview it in this chat.")
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        .frame(maxWidth: .infinity)
                         .padding(.top, 28)
                     } else {
                         ForEach(messages) { message in
