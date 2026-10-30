@@ -3,10 +3,12 @@ import SwiftUI
 /// NightGram's local-only settings prototype.
 /// The host app must add a navigation entry before users can open this view.
 public struct NightGramPanel: View {
+    @AppStorage("nightgram.hideReadStatus") private var hideReadStatus = false
+
     public init() {}
 
     public var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section("NightGram") {
                     NavigationLink {
@@ -25,6 +27,12 @@ public struct NightGramPanel: View {
                         Label("Appearance", systemImage: "paintpalette")
                     }
                 }
+                Section("Privacy") {
+                    Toggle("Hide read status", isOn: $hideReadStatus)
+                    Text("Saved on this device as a preference preview. This switch does not yet change Telegram's read-receipt network behavior.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
                 Section {
                     Label("Demo mode — changes stay on this device", systemImage: "info.circle")
                         .font(.footnote)
@@ -34,6 +42,7 @@ public struct NightGramPanel: View {
             .navigationTitle("NightGram PANEL")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationViewStyle(.stack)
     }
 }
 
